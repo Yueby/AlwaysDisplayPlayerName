@@ -96,7 +96,9 @@ namespace AlwaysDisplayPlayerName.Patches
         /// <returns>协程</returns>
         public static IEnumerator DelayedCreateDistanceDisplay(PlayerName originalPlayerName)
         {
-            yield return null;
+            // 延迟50毫秒，确保UI组件完全初始化
+            yield return new WaitForSeconds(0.1f);
+
             CreateDistanceDisplay(originalPlayerName);
         }
 

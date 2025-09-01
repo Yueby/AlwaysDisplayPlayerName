@@ -211,7 +211,7 @@ namespace AlwaysDisplayPlayerName.Components
 
                     _distanceRect.anchoredPosition = new Vector2(targetX, initialY);
                     _hasSetPosition = true;
-                    Plugin.Log.LogInfo($"Sync UI for character: {_playerName.characterInteractable.character.name}");
+                    Plugin.Log.LogInfo($"Sync UI for character: {_playerName.characterInteractable.character.name}, playerNameSize: {_playerNameRect.sizeDelta}, playerNamePos: {playerNamePos}");
                 }
             }
             catch (Exception e)
